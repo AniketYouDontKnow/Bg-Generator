@@ -7,7 +7,7 @@ const random = document.querySelector(".random-button");
 const body = document.getElementById("gradient");
 
 // Function to set the gradient once changed
-function setGraident() {
+function setGradient() {
   // create the css
   body.style.background = `linear-gradient(to right, ${color1.value}, ${color2.value})`;
   // put the css of background on the screen
@@ -30,12 +30,12 @@ function setRandomColor() {
   // function to set the random color
   color1.value = randomColor();
   color2.value = randomColor();
-  setGraident();
+  setGradient();
 }
 
 // Every time first parameter changes, call this function
-color1.addEventListener("input", setGraident);
+color1.addEventListener("input", setGradient);
 
-color2.addEventListener("input", setGraident);
+color2.addEventListener("input", setGradient);
 
 random.addEventListener("click", setRandomColor);
